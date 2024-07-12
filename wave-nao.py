@@ -21,7 +21,8 @@ if current_posture != "Stand":
     posture_proxy.goToPosture("StandInit", 1.0)
 
 try:
-    with open("C:\\venvProjects\\projectIshani\\flask-server\\responseText.txt", "r") as f:
+    # read the ChatGPT response file and have NAO speak it
+    with open("C:\\venvProjects\\projectIshani\\flask-server\\response.txt", "r") as f:
         text = f.read().replace('\n', ' ')
     tts.say(text)
 except Exception as e:
